@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa de Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nosso Amor 💖</h1>
+        <p>Estamos juntos há <span id="tempo-namoro"></span>!</p>
+        <p>Veja nossa playlist especial:</p>
+        <a href="https://open.spotify.com/playlist/37i9dQZF1DXbW8B5ArmaoC?si=Jg1PgYHgTHW1LJF2XyBkTw" class="button">Ouça nossa playlist</a>
+
+        <div class="fotos">
+            <section>
+            <h2>Memórias Juntos 📸</h2>
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/05/21/people-2589047_640.jpg" alt="Foto de nós dois" class="foto">
+            <img src="https://cdn.pixabay.com/photo/2018/05/12/03/18/sunset-3392348_640.jpg" alt="Outro momento especial" class="foto">
+            <img src="https://cdn.pixabay.com/photo/2016/11/02/00/36/couple-1790138_640.jpg" alt="Foto de nós dois" class="foto">
+            <img src="https://cdn.pixabay.com/photo/2020/04/04/01/53/couple-5000549_640.jpg" alt="Outro momento especial" class="foto">
+
+        </div>
+
+        <div class="mensagem">
+            <h2>Mensagem Especial 💌</h2>
+            <p>Amor, cada dia ao seu lado é especial. Obrigado(a) por fazer parte da minha vida. Que venham muitos mais anos juntos!</p>
+        </div>
+
+        <p class="assinatura">Com amor, Dênis </p>
+    </div>
+
+    <script>
+        // Data de início do namoro
+        const inicioNamoro = new Date('2020-01-01'); // Ajuste a data conforme necessário
+        const hoje = new Date();
+        
+        // Calcula a diferença em milissegundos e depois converte para dias
+        const diferencaTempo = hoje - inicioNamoro;
+        const dias = Math.floor(diferencaTempo / (1000 * 60 * 60 * 24));
+
+        // Atualiza o tempo de namoro no HTML
+        document.getElementById('tempo-namoro').innerText = `${dias} dias`;
+    </script>
+</body>
+</html>
